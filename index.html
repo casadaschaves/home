@@ -39,13 +39,17 @@
       box-sizing: border-box;
     }
 
+    html {
+      background-color: #ffffff;
+    }
+
     body {
       margin: 0;
       font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-      background-color: var(--bg-body);
+      background-color: transparent;
+      /* Allow html bg to show */
       color: var(--text-main);
       line-height: 1.6;
-      /* Background Image Logic */
       position: relative;
     }
 
@@ -63,9 +67,10 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      opacity: 0.08;
-      /* Very subtle watermark */
+      opacity: 0.15;
+      /* Increased opacity for better visibility */
       filter: grayscale(100%);
+      pointer-events: none;
     }
 
     a {
@@ -434,7 +439,8 @@
 
     /* HOW IT WORKS */
     .bg-light {
-      background-color: var(--light-gray);
+      background-color: rgba(248, 249, 250, 0.85);
+      /* Semi-transparent */
     }
 
     .steps {
