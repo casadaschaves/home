@@ -121,8 +121,8 @@
     }
 
     .brand-text h1 {
-      font-size: 26px;
-      /* Larger Brand Name */
+      font-size: 20px;
+      /* Reduced from 26px */
       margin: 0;
       color: var(--yellow);
       text-transform: uppercase;
@@ -133,11 +133,21 @@
     }
 
     .brand-text p {
-      font-size: 14px;
+      font-size: 13px;
+      /* Reduced from 14px */
       margin: 0;
-      /* Reset margin for flex alignment */
       color: #ccc;
       white-space: nowrap;
+    }
+
+    @media (max-width: 400px) {
+      .brand-text h1 {
+        font-size: 18px;
+      }
+
+      .brand-text p {
+        font-size: 11px;
+      }
     }
 
     /* NAV & HAMBURGER */
