@@ -1,0 +1,728 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Casa das Chaves | Chaveiro em Goiânia (Atendimento em Domicílio)</title>
+  <meta name="description"
+    content="Chaveiro em Goiânia com atendimento em domicílio. Abertura de portas, cópias de chaves, chaves automotivas e codificadas. Orçamento rápido pelo WhatsApp." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Casa das Chaves | Chaveiro em Goiânia" />
+  <meta property="og:description"
+    content="Atendimento em domicílio: Abertura • Cópias • Automotivas. Chame no WhatsApp!" />
+  <meta property="og:image" content="https://i.ibb.co/RkRZ6q4J/cahve.jpg" />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root {
+      /* Palette */
+      --yellow: #FFF59D;
+      /* Even Softer Yellow (Pale) */
+      --black: #111111;
+      --white: #ffffff;
+      --light-gray: #f8f9fa;
+      --green: #25D366;
+      /* Vivid WhatsApp Green */
+      --blue: #0056b3;
+
+      --bg-body: var(--white);
+      --bg-hero: var(--yellow);
+      --bg-dark: var(--black);
+
+      --text-main: #222;
+      --text-light: #555;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: .2s;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .wrap {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* HEADER */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: var(--black);
+      padding: 12px 0;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand img {
+      height: 48px;
+      border-radius: 6px;
+      border: 2px solid var(--white);
+    }
+
+    .brand-text h1 {
+      font-size: 18px;
+      margin: 0;
+      color: var(--yellow);
+      text-transform: uppercase;
+      font-weight: 900;
+      letter-spacing: 0.5px;
+    }
+
+    .brand-text p {
+      font-size: 12px;
+      margin: 0;
+      color: #ccc;
+    }
+
+    .nav-links {
+      display: none;
+      gap: 24px;
+    }
+
+    @media(min-width: 768px) {
+      .nav-links {
+        display: flex;
+      }
+
+      .nav-links a {
+        font-size: 15px;
+        font-weight: 500;
+        color: #fff;
+      }
+
+      .nav-links a:hover {
+        color: var(--yellow);
+      }
+    }
+
+    .btn-wa-header {
+      background-color: var(--green);
+      color: #fff;
+      font-weight: bold;
+      padding: 8px 18px;
+      border-radius: 50px;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn-wa-header:hover {
+      background-color: #1ebe57;
+    }
+
+    /* HERO */
+    .hero {
+      padding: 80px 0;
+      background-color: var(--yellow);
+      /* Overlay the yellow color on top of the image */
+      background-image:
+        linear-gradient(rgba(255, 245, 157, 0.92), rgba(255, 245, 157, 0.96)),
+        url('https://images.unsplash.com/photo-1622359672620-80a2b8e44146?q=80&w=1000&auto=format&fit=crop');
+      /* Keys image */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      /* Parallax-like effect */
+      color: var(--black);
+      text-align: center;
+      box-shadow: inset 0 -10px 20px rgba(0, 0, 0, 0.05);
+      position: relative;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      line-height: 1.1;
+      margin: 0 0 20px;
+      font-weight: 900;
+      text-shadow: 0 2px 0 rgba(255, 255, 255, 0.4);
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-sub {
+      font-size: 20px;
+      margin-bottom: 32px;
+      color: #111;
+      font-weight: 600;
+      background: rgba(255, 255, 255, 0.4);
+      display: inline-block;
+      padding: 4px 16px;
+      border-radius: 4px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .features-inline {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px 24px;
+      margin-bottom: 32px;
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    .features-inline li::before {
+      content: "✓";
+      margin-right: 6px;
+      color: #000;
+    }
+
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+
+    .badge {
+      background: rgba(0, 0, 0, 0.06);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #222;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    .cta-group {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      align-items: center;
+    }
+
+    @media(min-width: 500px) {
+      .cta-group {
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 24px;
+      border-radius: 8px;
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 15px;
+      width: 100%;
+      max-width: 300px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    @media (max-width: 480px) {
+      .btn {
+        padding: 12px 20px;
+        font-size: 14px;
+        max-width: 100%;
+      }
+    }
+
+    .btn-primary {
+      background-color: var(--green);
+      color: #fff;
+      box-shadow: 0 4px 6px rgba(37, 211, 102, 0.4);
+    }
+
+    .btn-primary:hover {
+      background-color: #1ebe57;
+      /* Slightly darker vivid green on hover */
+      box-shadow: 0 6px 12px rgba(37, 211, 102, 0.5);
+    }
+
+    .btn-secondary {
+      background-color: var(--blue);
+      color: #fff;
+      box-shadow: 0 4px 6px rgba(0, 86, 179, 0.4);
+    }
+
+    .btn-secondary:hover {
+      background-color: #004494;
+      box-shadow: 0 6px 12px rgba(0, 86, 179, 0.5);
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 60px 0;
+    }
+
+    .section-title {
+      font-size: 28px;
+      text-align: center;
+      margin-bottom: 40px;
+      color: var(--black);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: -0.5px;
+    }
+
+    .section-title::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: var(--yellow);
+      margin: 12px auto 0;
+    }
+
+    /* HOW IT WORKS */
+    .bg-light {
+      background-color: var(--light-gray);
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    @media(min-width: 700px) {
+      .steps {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .step-item {
+      background: var(--white);
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      border: 1px solid #eee;
+      text-align: center;
+    }
+
+    .step-num {
+      width: 40px;
+      height: 40px;
+      background: var(--yellow);
+      color: var(--black);
+      font-weight: 900;
+      font-size: 18px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+    }
+
+    .step-text strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 18px;
+    }
+
+    .step-text span {
+      font-size: 14px;
+      color: var(--text-light);
+    }
+
+    /* SERVICES */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    @media(min-width: 600px) {
+      .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .service-card {
+      background: var(--white);
+      padding: 24px;
+      border-radius: 12px;
+      border: 2px solid #eee;
+      /* Stronger border */
+      text-align: center;
+      transition: .2s;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
+    }
+
+    .service-card:hover {
+      border-color: var(--yellow);
+      transform: translateY(-4px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .service-card strong {
+      display: block;
+      color: var(--black);
+      margin-bottom: 8px;
+      font-size: 18px;
+      /* Larger Text */
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .service-card span {
+      font-size: 14px;
+      color: var(--text-light);
+      line-height: 1.4;
+    }
+
+    /* Subtle background icon for texture */
+    .service-card::after {
+      content: "🔑";
+      position: absolute;
+      bottom: -10px;
+      right: -10px;
+      font-size: 60px;
+      opacity: 0.05;
+      pointer-events: none;
+    }
+
+    /* GALLERY */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    @media(min-width: 768px) {
+      .gallery-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .gallery-item {
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .gallery-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      font-size: 12px;
+      padding: 8px;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    /* LOCATION */
+    .location-box {
+      background: var(--white);
+      padding: 40px;
+      border-radius: 16px;
+      text-align: center;
+      border: 1px solid #eee;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    .address {
+      font-size: 20px;
+      margin-bottom: 24px;
+      color: var(--black);
+      font-weight: 600;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--black);
+      padding: 40px 20px;
+      text-align: center;
+      font-size: 13px;
+      color: #888;
+    }
+
+    footer a {
+      color: var(--yellow);
+      font-weight: bold;
+    }
+
+    /* FLOATING BUTTON */
+    .wa-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 64px;
+      height: 64px;
+      background: var(--green);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+      z-index: 999;
+      transition: transform .2s;
+    }
+
+    .wa-float:hover {
+      transform: scale(1.1);
+    }
+
+    .wa-float img,
+    .wa-float svg {
+      width: 36px;
+      height: 36px;
+    }
+    }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="wrap header-inner">
+      <div class="brand">
+        <img src="https://i.ibb.co/RkRZ6q4J/cahve.jpg" alt="Logo Casa das Chaves">
+        <div class="brand-text">
+          <h1>Casa das Chaves</h1>
+          <p>Fechaduras • Chaves • Carimbos</p>
+        </div>
+      </div>
+
+      <div class="nav-links">
+        <a href="#servicos">Serviços</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#localizacao">Localização</a>
+      </div>
+
+      <a href="#" id="btnHeaderWa" class="btn-wa-header">
+        WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <h2>Chaveiro em Goiânia<br>com Atendimento em Domicílio</h2>
+        <div class="hero-sub">Abriu? Quebrou? Perdeu? Nós resolvemos.</div>
+
+        <ul class="features-inline">
+          <li>Abertura de portas</li>
+          <li>Cofres e Cadeados</li>
+          <li>Cópias de chaves</li>
+          <li>Chaves Automotivas</li>
+        </ul>
+
+        <div class="badges">
+          <span class="badge">🏠 Atendimento em domicílio</span>
+          <span class="badge">🚀 Chegamos rápido</span>
+          <span class="badge">📍 Goiânia e região</span>
+        </div>
+
+        <div class="cta-group">
+          <a href="#" id="btnHeroWa" class="btn btn-primary">
+            Chamar no WhatsApp
+          </a>
+          <a href="https://maps.app.goo.gl/mFJhrhhtQiWK6y3e7" target="_blank" class="btn btn-secondary">
+            Ver no Mapa
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="wrap">
+      <h3 class="section-title">Como funciona</h3>
+      <div class="steps">
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <div class="step-text"><strong>Chame no WhatsApp</strong><span>Clique no botão e fale com a gente</span></div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <div class="step-text"><strong>Envie foto + local</strong><span>Para orçamento rápido e preciso</span></div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <div class="step-text"><strong>Resolvemos!</strong><span>Vamos até você solucionar o problema</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="servicos" class="bg-light">
+      <div class="wrap">
+        <h3 class="section-title">Nossos Serviços</h3>
+        <div class="services-grid">
+          <div class="service-card">
+            <strong>Abertura de Portas</strong>
+            <span>Residencial e comercial, sem danificar.</span>
+          </div>
+          <div class="service-card">
+            <strong>Chaves Automotivas</strong>
+            <span>Simples, canivete e presença (codificadas).</span>
+          </div>
+          <div class="service-card">
+            <strong>Cofres e Cadeados</strong>
+            <span>Abertura técnica especializada.</span>
+          </div>
+          <div class="service-card">
+            <strong>Cópias de Chaves</strong>
+            <span>Simples, tetra e pantográficas.</span>
+          </div>
+          <div class="service-card">
+            <strong>Troca de Segredo</strong>
+            <span>Garanta a segurança da sua nova casa.</span>
+          </div>
+          <div class="service-card">
+            <strong>Carimbos</strong>
+            <span>Automáticos e de madeira personalizados.</span>
+          </div>
+        </div>
+        <div style="text-align:center; margin-top:32px;">
+          <a href="#" id="btnServicesWa" class="btn btn-primary" style="max-width:280px">Pedir Orçamento</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section id="produtos">
+      <div class="wrap">
+        <h3 class="section-title">Galeria de Fotos</h3>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="https://placehold.co/400x400/222/fff?text=Chaves" alt="Chaves">
+            <div class="gallery-caption">Residenciais</div>
+          </div>
+          <div class="gallery-item">
+            <img src="https://placehold.co/400x400/222/fff?text=Automotivas" alt="Automotivas">
+            <div class="gallery-caption">Automotivas</div>
+          </div>
+          <div class="gallery-item">
+            <img src="https://placehold.co/400x400/222/fff?text=Fechaduras" alt="Fechaduras">
+            <div class="gallery-caption">Fechaduras</div>
+          </div>
+          <div class="gallery-item">
+            <img src="https://placehold.co/400x400/222/fff?text=Cadeados" alt="Cadeados">
+            <div class="gallery-caption">Cadeados</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCATION -->
+    <section id="localizacao" class="bg-light">
+      <div class="wrap">
+        <h3 class="section-title">Localização</h3>
+        <div class="location-box">
+          <p style="color:#666; font-size:16px; margin-bottom:12px;">
+            Atendemos em domicílio ou em nossa loja física.
+          </p>
+          <div class="address">Rua 08, nº 67, Setor Central, Goiânia-GO</div>
+          <a href="https://maps.app.goo.gl/mFJhrhhtQiWK6y3e7" target="_blank" class="btn btn-secondary"
+            style="max-width:250px">
+            Abrir no Google Maps
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>&copy; 2026 Casa das Chaves Fechaduras e Carimbos</p>
+      <div style="margin-top:10px;">
+        <a href="#" id="btnFooterWa">Chamar no WhatsApp</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING BUTTON -->
+  <a href="#" id="btnFloatWa" class="wa-float" title="Chamar no WhatsApp">
+    <!-- SVG WhatsApp Icon -->
+    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="#fff" style="width:32px; height:32px;">
+      <path
+        d="M16 2C8.28 2 2 8.28 2 16c0 2.5.66 4.84 1.81 6.88L2 30l7.28-1.91A13.9 13.9 0 0016 30c7.72 0 14-6.28 14-14S23.72 2 16 2zm0 25.5c-2.19 0-4.27-.6-6.1-1.63l-.44-.26-4.52 1.19 1.2-4.4-.28-.45C4.79 20.08 4.2 18.06 4.2 16c0-6.52 5.28-11.8 11.8-11.8s11.8 5.28 11.8 11.8-5.28 11.8-11.8 11.8zm6.49-8.84c-.36-.18-2.11-1.04-2.44-1.16-.32-.12-.56-.18-.79.18-.24.36-.93 1.16-1.14 1.4-.21.24-.42.27-.78.09-1.9-.92-3.15-2.26-4.41-4.43-.24-.41-.03-.63.15-.81.16-.16.36-.42.54-.63.18-.21.24-.36.36-.6.12-.24.06-.45-.03-.63-.09-.18-.79-1.9-1.08-2.6-.28-.68-.57-.59-.79-.6H8.93c-.24 0-.63.09-.96.45-.33.36-1.26 1.23-1.26 3s.96 3.48 1.09 3.66c.13.18 3.73 5.69 9.04 7.98 2.5 1.08 3.45 1.16 5.06.92.93-.14 2.11-.86 2.41-1.69.29-.83.29-1.54.2-1.69-.08-.16-.31-.25-.67-.43z" />
+    </svg>
+  </a>
+
+  <script>
+    // WhatsApp Logic
+    const NUMBER = "5562999246368";
+
+    function getWaLink(msg) {
+      return "https://wa.me/" + NUMBER + "?text=" + encodeURIComponent(msg);
+    }
+
+    // Messages
+    const msgDefault = "Olá! Preciso de atendimento em domicílio. Bairro/endereço: ____ (Casa das Chaves)";
+    const msgPeca = "Olá! Quero atendimento em domicílio. Serviço: ____. Bairro/endereço: ____.";
+    const msgOrcamento = "Olá! Quero um orçamento para atendimento em domicílio. Vou enviar fotos.";
+
+    // Assign links
+    document.getElementById('btnHeaderWa').href = getWaLink(msgDefault);
+    document.getElementById('btnHeroWa').href = getWaLink(msgOrcamento);
+    document.getElementById('btnServicesWa').href = getWaLink(msgPeca);
+    document.getElementById('btnFooterWa').href = getWaLink(msgDefault);
+    document.getElementById('btnFloatWa').href = getWaLink(msgDefault);
+  </script>
+
+</body>
+
+</html>
