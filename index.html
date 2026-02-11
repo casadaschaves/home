@@ -100,6 +100,26 @@
       border: 2px solid var(--white);
     }
 
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    @media (min-width: 600px) {
+      .brand-text {
+        flex-direction: row;
+        align-items: baseline;
+        gap: 12px;
+      }
+
+      .brand-text p::before {
+        content: "|";
+        margin-right: 10px;
+        color: #444;
+      }
+    }
+
     .brand-text h1 {
       font-size: 26px;
       /* Larger Brand Name */
@@ -109,12 +129,15 @@
       font-weight: 900;
       letter-spacing: 0.5px;
       line-height: 1;
+      white-space: nowrap;
     }
 
     .brand-text p {
       font-size: 14px;
-      margin-top: 4px;
+      margin: 0;
+      /* Reset margin for flex alignment */
       color: #ccc;
+      white-space: nowrap;
     }
 
     /* NAV & HAMBURGER */
