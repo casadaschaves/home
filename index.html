@@ -304,13 +304,36 @@
 
     .hero-sub {
       font-size: 20px;
-      margin-bottom: 32px;
+      margin-bottom: 16px;
+      /* Reduced bottom margin */
       color: #111;
       font-weight: 600;
       background: rgba(255, 255, 255, 0.4);
       display: inline-block;
       padding: 4px 16px;
       border-radius: 4px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-highlight {
+      font-size: 28px;
+      /* Larger than sub */
+      font-weight: 900;
+      color: var(--black);
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-cta-copy {
+      font-size: 18px;
+      font-weight: 700;
+      color: #000;
+      margin-bottom: 32px;
       position: relative;
       z-index: 2;
     }
@@ -688,9 +711,15 @@
     <section class="hero">
       <div class="wrap">
         <h2>Problema com chave ou fechadura?</h2>
+
+        <div class="hero-highlight">• Chaveiro em Goiânia •</div>
+
         <div class="hero-sub">
-          Chaveiro em Goiânia atendimento no local, para abertura, reparos e troca de fechaduras.
-          <br>Chame agora no Whatsapp e resolvemos no seu endereço.
+          Atendimento no local, para abertura, reparos e troca de fechaduras.
+        </div>
+
+        <div class="hero-cta-copy">
+          Chame agora no Whatsapp e resolvemos no seu endereço.
         </div>
 
         <ul class="features-inline">
