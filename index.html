@@ -47,8 +47,10 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-      /* Image: fundo-cs.png with 50% white overlay = 50% visibility (Restored per request) */
-      background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('https://i.ibb.co/V0Kn4BPK/fundo-cs.png');
+      /* Image: fundo-cs.png with 50% white overlay - Restored with cache busting */
+      background-color: #ffffff;
+      /* Fallback */
+      background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('https://i.ibb.co/V0Kn4BPK/fundo-cs.png?v=restore');
       background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
