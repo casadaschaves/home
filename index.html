@@ -43,34 +43,20 @@
       background-color: #ffffff;
     }
 
+    /* Subtle Background Image with White Overlay */
     body {
       margin: 0;
       font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-      background-color: transparent;
-      /* Allow html bg to show */
-      color: var(--text-main);
-      line-height: 1.6;
-      position: relative;
-    }
-
-    /* Subtle Background Pattern/Image */
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      /* Image: fundo-cs.png */
-      background-image: url('https://i.ibb.co/V0Kn4BPK/fundo-cs.png');
+      /* Image: fundo-cs.png with 85% white overlay = ~15% visibility (adjust as needed) */
+      /* User wanted it visible, so let's try 50% overlay -> 50% visibility */
+      background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('https://i.ibb.co/V0Kn4BPK/fundo-cs.png');
       background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
-      opacity: 0.4;
-      /* Increased opacity */
-      /* filter: grayscale(100%); Removed grayscale */
-      pointer-events: none;
+      background-attachment: fixed;
+      color: var(--text-main);
+      line-height: 1.6;
+      position: relative;
     }
 
     a {
